@@ -41,27 +41,29 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(186, 207);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(89, 26);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnRegisterHere
             // 
             this.btnRegisterHere.Location = new System.Drawing.Point(311, 207);
-            this.btnRegisterHere.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegisterHere.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisterHere.Name = "btnRegisterHere";
             this.btnRegisterHere.Size = new System.Drawing.Size(123, 26);
             this.btnRegisterHere.TabIndex = 1;
             this.btnRegisterHere.Text = "REGISTER HERE";
             this.btnRegisterHere.UseVisualStyleBackColor = true;
+            this.btnRegisterHere.Click += new System.EventHandler(this.btnRegisterHere_Click);
             // 
             // txtUsern
             // 
             this.txtUsern.Location = new System.Drawing.Point(274, 123);
-            this.txtUsern.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsern.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsern.Name = "txtUsern";
             this.txtUsern.Size = new System.Drawing.Size(128, 20);
             this.txtUsern.TabIndex = 2;
@@ -69,7 +71,7 @@
             // txtPassw
             // 
             this.txtPassw.Location = new System.Drawing.Point(274, 161);
-            this.txtPassw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassw.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassw.Name = "txtPassw";
             this.txtPassw.Size = new System.Drawing.Size(128, 20);
             this.txtPassw.TabIndex = 2;
@@ -133,7 +135,7 @@
             this.Controls.Add(this.txtUsern);
             this.Controls.Add(this.btnRegisterHere);
             this.Controls.Add(this.btnLogin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);

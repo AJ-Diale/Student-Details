@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.grbGender = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,13 +45,15 @@
             this.txtModuleCode = new System.Windows.Forms.TextBox();
             this.txtModuleName = new System.Windows.Forms.TextBox();
             this.txtModuleDescription = new System.Windows.Forms.TextBox();
-            this.txtModileLinks = new System.Windows.Forms.TextBox();
+            this.txtModuleLinks = new System.Windows.Forms.TextBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGender = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,16 +92,6 @@
             this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Phone";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // grbGender
-            // 
-            this.grbGender.Location = new System.Drawing.Point(88, 220);
-            this.grbGender.Name = "grbGender";
-            this.grbGender.Size = new System.Drawing.Size(127, 75);
-            this.grbGender.TabIndex = 1;
-            this.grbGender.TabStop = false;
-            this.grbGender.Text = "Gender";
             // 
             // label5
             // 
@@ -163,7 +154,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 22);
             this.txtName.TabIndex = 3;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtSurname
             // 
@@ -207,12 +197,12 @@
             this.txtModuleDescription.Size = new System.Drawing.Size(195, 22);
             this.txtModuleDescription.TabIndex = 3;
             // 
-            // txtModileLinks
+            // txtModuleLinks
             // 
-            this.txtModileLinks.Location = new System.Drawing.Point(1044, 181);
-            this.txtModileLinks.Name = "txtModileLinks";
-            this.txtModileLinks.Size = new System.Drawing.Size(195, 22);
-            this.txtModileLinks.TabIndex = 3;
+            this.txtModuleLinks.Location = new System.Drawing.Point(1044, 181);
+            this.txtModuleLinks.Name = "txtModuleLinks";
+            this.txtModuleLinks.Size = new System.Drawing.Size(195, 22);
+            this.txtModuleLinks.TabIndex = 3;
             // 
             // dtpDOB
             // 
@@ -230,7 +220,6 @@
             this.label11.Size = new System.Drawing.Size(208, 32);
             this.label11.TabIndex = 0;
             this.label11.Text = "Student Details";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnSearch
             // 
@@ -240,6 +229,7 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
@@ -249,6 +239,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -258,6 +249,7 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -267,6 +259,23 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(93, 227);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Gender";
+            // 
+            // txtGender
+            // 
+            this.txtGender.Location = new System.Drawing.Point(194, 221);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(200, 22);
+            this.txtGender.TabIndex = 3;
             // 
             // frmMain
             // 
@@ -279,19 +288,20 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dtpDOB);
-            this.Controls.Add(this.txtModileLinks);
+            this.Controls.Add(this.txtModuleLinks);
             this.Controls.Add(this.txtModuleDescription);
             this.Controls.Add(this.txtModuleName);
             this.Controls.Add(this.txtModuleCode);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.dgvDisplay);
-            this.Controls.Add(this.grbGender);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
@@ -313,7 +323,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox grbGender;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -327,13 +336,15 @@
         private System.Windows.Forms.TextBox txtModuleCode;
         private System.Windows.Forms.TextBox txtModuleName;
         private System.Windows.Forms.TextBox txtModuleDescription;
-        private System.Windows.Forms.TextBox txtModileLinks;
+        private System.Windows.Forms.TextBox txtModuleLinks;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtGender;
     }
 }
 

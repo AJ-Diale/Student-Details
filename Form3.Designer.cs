@@ -42,12 +42,13 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(214, 214);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(131, 27);
             this.btnRegister.TabIndex = 0;
             this.btnRegister.Text = "REGISTER USER";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label1
             // 
@@ -85,7 +86,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(296, 84);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(96, 20);
             this.txtUsername.TabIndex = 5;
@@ -93,7 +94,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(296, 120);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(96, 20);
             this.txtPassword.TabIndex = 6;
@@ -101,7 +102,7 @@
             // txtConfirm
             // 
             this.txtConfirm.Location = new System.Drawing.Point(296, 157);
-            this.txtConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(96, 20);
             this.txtConfirm.TabIndex = 7;
@@ -127,6 +128,7 @@
             this.lblLogin.Size = new System.Drawing.Size(91, 13);
             this.lblLogin.TabIndex = 10;
             this.lblLogin.Text = "Back to Login --->";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // frmRegistraton
             // 
@@ -143,7 +145,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegister);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegistraton";
             this.Text = "Registration";
             this.ResumeLayout(false);
